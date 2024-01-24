@@ -1,4 +1,5 @@
 sudo: required
 language: java
+jdk: openjdk17
 before_install:
   - mvn clean install
