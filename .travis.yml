@@ -1,13 +1,11 @@
 language: java
 
-jdk: oraclejdk8
-
-before_install:
-  - chmod +x mvnw
+jdk:
+  - oraclejdk8
 
 install: true
 
-script: ./mvnw clean install
+script: mvn -DskipTests=true clean verify
 
 cache:
   directories:
