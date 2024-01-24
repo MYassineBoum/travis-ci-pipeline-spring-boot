@@ -1,5 +1,8 @@
-sudo: required
+sudo: true
 language: java
 jdk: openjdk17
+dist: trusty
 before_install:
+  - chmod +x mvnw
+script:
   - mvn clean install
