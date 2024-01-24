@@ -1,9 +1,14 @@
 language: java
-dist: trusty
-jdk: oraclejdk9
-addons:
-  apt:
-    packages:
-      - oracle-java9-installer
+
+jdk: oraclejdk8
+
 before_install:
   - chmod +x mvnw
+
+install: true
+
+script: ./mvnw clean install
+
+cache:
+  directories:
+    - $HOME/.m2
